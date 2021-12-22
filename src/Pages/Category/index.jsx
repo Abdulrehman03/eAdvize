@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createStyles, makeStyles } from "@mui/styles";
-import Layout from "../Components/Layout/index";
+import Layout from "../../Components/Layout/index";
+import Category from "../../Components/Category/";
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
@@ -10,13 +11,15 @@ const useStyles = makeStyles(() =>
   })
 );
 
-const Landing = () => {
+const CategoryPage = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Layout></Layout>
+      <Layout register={true}>
+        <Category />
+      </Layout>
     </div>
   );
 };
 
-export default Landing;
+export default CategoryPage;
