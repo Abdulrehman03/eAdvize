@@ -1,0 +1,23 @@
+.checkbox_navigation:checked ~ .navigation_background {
+  transform: scale(80);
+}
+
+.checkbox_navigation:checked ~ .navigation_nav {
+  opacity: 1;
+  display: block; 
+  transition: all 2s;
+} 
+
+.checkbox_navigation:checked + .navigation_button .navigation_icon {
+  background-color: transparent;
+}
+
+.checkbox_navigation:checked + .navigation_button .navigation_icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.checkbox_navigation:checked + .navigation_button .navigation_icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+} 
