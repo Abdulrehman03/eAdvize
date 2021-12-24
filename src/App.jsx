@@ -5,6 +5,7 @@ import Landing from "./Pages/Landing";
 import Concept from "./Pages/Concept";
 import CategoryPage from "./Pages/Category/";
 import ConsultantRegistration from "./Pages/Register/";
+
 import "./App.css";
 import theme from "./theme";
 
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<Landing />} />
           <Route path="concept" element={<Concept />} />
           <Route path="/category" element={<CategoryPage />} />
+
           <Route
             path="/consultant-registration"
             element={<ConsultantRegistration />}

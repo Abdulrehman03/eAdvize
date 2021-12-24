@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles((theme) => ({
   footer: {
-    color: "#e5e5e8", 
+    color: "#e5e5e8",
     // bottom: 0,
     // position: 'absolute',
     width: "100vw",
@@ -41,7 +41,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: "inherit",
     paddingTop: "30px",
     "@media (max-width: 595px)": {
-      paddingTop: "0", 
+      paddingTop: "0",
       width: "250px",
     },
   },
@@ -139,7 +139,7 @@ export const useStyles = makeStyles((theme) => ({
       color: "#ffffff",
 
       "@media (max-width: 595px)": {
-        fontSize: "18px", 
+        fontSize: "18px",
         lineHeight: "32px",
       },
     },
@@ -157,19 +157,19 @@ export const useStyles = makeStyles((theme) => ({
       color: "#ffffff",
 
       "@media (max-width: 595px)": {
-        fontSize: "18px", 
+        fontSize: "18px",
         lineHeight: "32px",
 
         "&:nth-child(1)": {
-          display:'none'
+          display: "none",
         },
       },
     },
   },
-  footerCol4Mobile:{
+  footerCol4Mobile: {
     "@media (max-width: 595px)": {
-      display:'flex',
-      justifyContent:'space-between',
+      display: "flex",
+      justifyContent: "space-between",
     },
   },
   footerItems: {
@@ -181,11 +181,11 @@ export const useStyles = makeStyles((theme) => ({
       color: "#e5e5e8",
       cursor: "pointer",
     },
-  }, 
-  footerItemsSocialIcons:{
+  },
+  footerItemsSocialIcons: {
     "@media (max-width: 595px)": {
-      display:'flex',
-      flexDirection:'column', 
+      display: "flex",
+      flexDirection: "column",
     },
   },
   footerItemCol2: {

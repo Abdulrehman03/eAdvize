@@ -46,6 +46,7 @@ export const useStyles = makeStyles((theme) => ({
 
   navigation_link: {
     display: "inline-block",
+    cursor: "pointer",
     font: "normal normal 14px/12px Open Sans",
     fontWeight: "bold !important",
     padding: ".6rem 2rem",
