@@ -25,11 +25,13 @@ const Header = (props) => {
           <div className={classes.subHeader}>
             <div className={classes.navigation}>
               <div className={classes.footerEadvizeLogo}>
+              <Link to="/" >
                 <img
                   className={classes.headerEadvizeLogo_img}
                   src={Logo}
                   alt=" welcome to eadvize logo here "
-                ></img>
+                />
+                </Link>
               </div>
 
               <nav className={`${classes.navigation_nav} `}>
@@ -48,7 +50,7 @@ const Header = (props) => {
                 ) : (
                   <ul className={classes.navigation_list}>
                     <li className={classes.navigation_item}>
-                      <Link to="#" className={classes.navigation_link}>
+                      <Link to="/concept" className={classes.navigation_link}>
                         Concept
                       </Link>
                     </li>
