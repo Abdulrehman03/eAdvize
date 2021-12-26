@@ -5,9 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     color: "#143D66",
     backgroundColor: `${theme.palette.primary.main} !important`,
     marginTop: "0px",
-    "@media screen and (max-width: 767px)": {
-      marginBottom: "65px !important",
-      background: "#143D66",
+    "@media screen and (max-width: 767px)": {  
       width: "100%",
       height: "100px",
     },

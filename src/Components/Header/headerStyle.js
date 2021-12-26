@@ -3,19 +3,19 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles((theme) => ({
   header: {
     color: "#143D66",
+    maxWidth: "100vw !important",
     backgroundColor: theme.palette.primary.main,
     marginTop: "0px",
     padding: "1rem 0 0",
     display: "block",
-    "@media(max-width:768px)": {
-      display: "none",
-      marginBottom: "65px !important",
+    "@media(max-width:910px)": {
+      display: "none", 
     },
   },
   subHeaderMobile: {
     backgroundColor: `${theme.palette.primary.main} !important`,
     display: "none",
-    "@media(max-width:768px)": {
+    "@media(max-width:910px)": {
       display: "block",
     },
   },

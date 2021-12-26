@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
 
-    "@media(max-width: 2000px) and (min-width: 1301px)": {
+    "@media(max-width: 3000px) and (min-width: 1201px)": {
       backgroundImage: `url(${Bg})`,
       paddingBottom: "30%",
       minHeight: "450px",
@@ -19,6 +19,20 @@ export const useStyles = makeStyles((theme) => ({
       backgroundPosition: "30%",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
+    },
+
+    "@media(max-width: 1200px) and (min-width: 901px)": {
+      backgroundImage: `url(${Bg})`,
+      paddingBottom: "45%", 
+    },
+
+    "@media(max-width: 900px) and (min-width: 600px)": {
+      backgroundImage: `url(${Bg})`,
+      paddingBottom: "55%", 
+    },
+    "@media(max-width: 595px)": {
+      backgroundImage: `url(${Bg})`,
+      paddingBottom: "100%", 
     },
 
     "&::before": {
@@ -65,6 +79,17 @@ export const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translateX(-50%)",
     fontSize: "120%",
+
+    "@media(max-width: 1300px) and (min-width: 900px)": {
+      width:'80%'
+    },
+
+    "@media(max-width: 900px) and (min-width: 600px)": {
+      width:'100%'
+    },
+    "@media(max-width: 595px)": {
+      width:'100%'
+    },
   },
 
   eAdvizeConsultantReg_insideContent: {
@@ -73,9 +98,15 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff",
     borderRadius: "15px",
     padding: "3.6rem",
+    "@media(max-width: 595px)": {
+      padding: "1rem 0.5rem",
+    },
   },
   eAdvizeConsultantReg_insideContentFlex: {
     width: "95%",
+    "@media(max-width: 595px)": {
+      width: "100%",
+    },
   },
 
   // content inside
@@ -85,6 +116,9 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: '"Open Sans", sans-serif',
     color: "#143D66",
     fontWeight: "bolder !important",
+    "@media(max-width: 595px)": {
+      fontSize: "20px !important",
+    },
   },
   subHead: {
     marginTop: "1rem !important",
@@ -122,7 +156,7 @@ export const useStyles = makeStyles((theme) => ({
     lineHeight: "12px !important",
     color: "#596571",
     textAlign: "left",
-    margin: "1rem 0 !important",
+    margin: "1rem 0 !important",  
   },
   button: {
     marginTop: "1.5rem !important",
@@ -134,6 +168,10 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     marginTop: "1rem !important",
+    "@media(max-width: 595px)": {
+      flexDirection:'column',
+      lineHeight: 2.5,
+    },
   },
   textFieldGroup: {
     display: "flex",

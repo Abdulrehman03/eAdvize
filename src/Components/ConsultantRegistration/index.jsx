@@ -1,18 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
 import { useTheme } from "@mui/styles";
 import Typography from "@mui/material/Typography";
 import { useStyles } from "./consultantRegistrationStyle";
 import TextField from "@mui/material/TextField";
-import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 import GoogleIcon from "@mui/icons-material/Google";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const ConsultantRegistration = () => {
-  useEffect(() => {
-    window.scrollTo(2, 2);
-  }, []);
   const theme = useTheme();
   const classes = useStyles(theme);
   return (
