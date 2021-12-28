@@ -6,20 +6,33 @@ export const useStyles = makeStyles((theme) =>
       height: "100vh",
       width: "100vw",
     },
+    skewDiv: {
+      height: "100px",
+      // width: "100vw",
+      background: "#27f5ba",
+    },
 
     group: {
       paddingLeft: "5px !important",
     },
-
+    mobilePadding: {
+      paddingTop: "0px !important",
+    },
     sectionOne: {
+      marginTop: "-50px",
+      transform: "skewY(-3deg)",
       background:
         "transparent linear-gradient(360deg, #143D66 0%, #006E77 35%, #27F5BA 100%) 0% 0% no-repeat padding-box",
+    },
+    sectionOneContent: {
+      transform: "skewY(3deg) !important",
     },
     headingText: {
       fontSize: "35px",
       color: "#143D66",
       fontWeight: "bold",
       letterSpacing: "0px",
+      fontFamily: "Open Sans Bold",
     },
     divider: {
       background:
@@ -29,6 +42,19 @@ export const useStyles = makeStyles((theme) =>
       marginTop: "25px",
       marginBottom: "25px",
     },
+    mobileDiivider: {
+      background:
+        "transparent linear-gradient(90deg, #00FFBA 0%, #143D66 100%) 0% 0% no-repeat padding-box",
+      height: "7px",
+      borderRadius: "4px",
+
+      marginBottom: "25px",
+      margin: "auto",
+    },
+    mobileDiividerHide: {
+      display: "none",
+    },
+
     bannerText: {
       fontSize: "25px",
       color: "white",
@@ -69,6 +95,7 @@ export const useStyles = makeStyles((theme) =>
     countText: {
       fontSize: "35px",
       color: "#143D66",
+      fontFamily: "Open Sans Bold",
     },
     countBody: {
       display: "flex",

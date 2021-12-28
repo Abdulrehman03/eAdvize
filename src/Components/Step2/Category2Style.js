@@ -12,6 +12,14 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "900",
     fontSize: "25px",
     fontFamily: "Open Sans !important",
+    marginBottom: "8px !important",
+  },
+  divider: {
+    background:
+      "transparent linear-gradient(90deg, #00FFBA 0%, #143D66 100%) 0% 0% no-repeat padding-box",
+    height: "7px",
+    borderRadius: "4px",
+    marginBottom: "25px",
   },
   innerGridGroup: {
     background: "#143D66 0% 0% no-repeat padding-box",

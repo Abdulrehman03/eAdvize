@@ -12,25 +12,33 @@ import Grid_chat from "../../Assests/landing/grid_chat.png";
 import Grid_shake from "../../Assests/landing/grid_shake.png";
 import Grid_group from "../../Assests/landing/grid_group.png";
 import landing from "../../Assests/landing/landing.png";
-import structure from "../../Assests/landing/structure.png";
-import landingTable from "../../Assests/landing/landingTable.png";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
+import TableContent from "../../Components/Landing/TableContent/";
+import Nos_restorus_section from "../../Components/Landing/Nos_restorus_section/";
 import { useStyles } from "./style";
 
 const Landing = () => {
   const theme = useTheme();
   const classes = useStyles(theme);
-  const matches = useMediaQuery("(max-width:768px)");
+  const matches = useMediaQuery("(min-width:768px)");
 
   return (
     <Layout>
       <div className={classes.root}>
-        <section className={classes.sectionOne}>
+        <section
+          className={classes.sectionOne}
+          style={{
+            paddingBottom: matches ? "18rem " : "30px",
+          }}
+        >
           <Container>
-            <Grid pt={10} pb={10} container>
-              <Grid item xs={12} lg={6}>
+            <Grid
+              pt={10}
+              pb={10}
+              container
+              className={`${matches && classes.mobilePadding}`}
+            >
+              <Grid item xs={12} lg={6} order={{ xs: 2, md: 1 }}>
                 <h3 className={classes.headingText}>
                   L’accompagnement idéal de la communauté freelances pour la
                   réussite de vos projets
@@ -51,69 +59,18 @@ const Landing = () => {
                   Je recherche un Freelance
                 </Button>
               </Grid>
-              <Grid item xs={12} lg={6}>
-                <img src={landing} width="100%" />
+              <Grid item xs={12} lg={6} order={{ xs: 1, md: 2 }}>
+                <div pr={20}>
+                  <img
+                    src={landing}
+                    style={{ paddingLeft: "20px", width: "90%" }}
+                  />
+                </div>
               </Grid>
             </Grid>
           </Container>
         </section>
-
-        {/* sami you could start from here and leave the bottom for me make and import new component or just do it here*/}
-        {/* images */}
-        <section
-          // style={{ backgroundColor: "#E7EEF2 !important" }}
-          className={classes.Table}
-        ></section>
-        <Container className={classes.TableContent}>
-          <p className={classes.section2}>
-            <span className={classes.subtile}>
-              Exclu ESN
-              <BoltOutlinedIcon />
-              Freelances
-            </span>
-            &nbsp; Grace à notre bourse d’intercontrats
-          </p>
-          <p className={classes.sectionTwoText}>
-            Nous faisons matcher vous besoins avec les offres du marché !
-          </p>
-          <br />
-          <div>
-            <img src={landingTable} width="100%" />
-          </div>
-        </Container>
-
-        <section style={{ backgroundColor: "#00ffba" }}>
-          <Container>
-            <Grid
-              container
-
-              // justifyContent={"center"}
-            >
-              <div>
-                <Grid item md={12}>
-                  <Grid container>
-                    <Grid item md={8}>
-                      <h1 className={classes.heading2}>Comment ça marche ? </h1>
-                      <div
-                        className={classes.divider2}
-                        style={{ width: "56px" }}
-                      ></div>
-                    </Grid>
-                    <Grid item md={4}>
-                      <Button
-                        className={classes.greenOutlinedButton2}
-                        endIcon={<ArrowForwardIcon />}
-                      >
-                        Je recherche un Freelance
-                      </Button>
-                    </Grid>
-                  </Grid>
-                </Grid>
-                <img src={structure} width="100%" />
-              </div>
-            </Grid>
-          </Container>
-        </section>
+        <TableContent />
         <section className={classes.section_les_dominas_expertise}>
           <Container>
             <div className={classes.les_dominas_expertise_heading}>
@@ -278,9 +235,10 @@ const Landing = () => {
                   sm={12}
                   className={`${matches && classes.le_modele_img_top} `}
                 >
-                  <div>
-                    <img style={{ width: "100%" }} src={Grid_chat} />
-                  </div>
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={Grid_chat}
+                  />
                 </Grid>
               </Grid>
               {/* 2 */}
@@ -292,7 +250,10 @@ const Landing = () => {
                   className={`${matches && classes.le_modele_img_top} `}
                 >
                   <div>
-                    <img style={{ width: "100%" }} src={Grid_shake} />
+                    <img
+                      style={{ width: "100%", height: "100%" }}
+                      src={Grid_shake}
+                    />
                   </div>
                 </Grid>
                 <Grid
@@ -351,14 +312,17 @@ const Landing = () => {
                   className={`${matches && classes.le_modele_img_top} `}
                 >
                   <div>
-                    <img style={{ width: "100%" }} src={Grid_group} />
+                    <img
+                      style={{ width: "100%", height: "100%" }}
+                      src={Grid_group}
+                    />
                   </div>
                 </Grid>
               </Grid>
             </Grid>
           </Container>
         </section>
-        <Container></Container>
+        <Nos_restorus_section />
       </div>
     </Layout>
   );

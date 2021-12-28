@@ -72,7 +72,7 @@ export const useStyles = makeStyles((theme) =>
       width: "70px",
       marginTop: "10px",
       position: "relative",
-      bottom: "50px",
+      bottom: "32px",
       right: "4px",
       zIndex: -10,
     },
@@ -174,6 +174,7 @@ export const useStyles = makeStyles((theme) =>
         fontSize: "24px",
       },
     },
+
     section_Freelance_Interprice_text: {
       font: "normal normal 25px/34px Open Sans",
       color: "#143D66",
@@ -192,7 +193,7 @@ export const useStyles = makeStyles((theme) =>
       paddingInlineStart: 0,
       margin: 0,
       alignItems: "center",
-      "@media(max-width: 595px)": {
+      "@media(max-width: 768px)": {
         flexDirection: "column",
       },
     },

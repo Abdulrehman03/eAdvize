@@ -11,6 +11,15 @@ export const useStyles = makeStyles(() => ({
     marginTop: "1rem !important",
     color: "#143D66",
   },
+  divider: {
+    background:
+      "transparent linear-gradient(90deg, #00FFBA 0%, #143D66 100%) 0% 0% no-repeat padding-box",
+    height: "7px",
+    margin: "auto",
+    borderRadius: "4px",
+    marginTop: "10px",
+    marginBottom: "25px",
+  },
   emailField: {
     borderRadius: "5px 5px 5px 5px",
     width: "80%",

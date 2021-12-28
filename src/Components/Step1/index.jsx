@@ -16,6 +16,7 @@ const Step1 = ({ bg, handleChange, onContinue }) => {
           <Grid item md={8} className={classes.col_1}>
             <div style={{ width: "88%" }}>
               <p className={classes.category}>Ma catégorie</p>
+              <div className={classes.divider} style={{ width: "56px" }}></div>
               <p className={classes.description}>
                 Choisissez jusqu’a 2 catégories professionnelles, la première
                 catégorie est la principale :

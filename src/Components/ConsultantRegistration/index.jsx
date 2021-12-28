@@ -27,6 +27,10 @@ const ConsultantRegistration = () => {
                     <Typography variant="h5" className={classes.title}>
                       Je crée mon compte BeAdvize
                     </Typography>
+                    <div
+                      className={classes.divider}
+                      style={{ width: "56px" }}
+                    ></div>
                     <Typography variant="body2" className={classes.subHead}>
                       Déjà inscrit ? <strong>Connectez-vous</strong>
                     </Typography>

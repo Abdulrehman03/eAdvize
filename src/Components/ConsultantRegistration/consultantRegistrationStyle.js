@@ -23,16 +23,16 @@ export const useStyles = makeStyles((theme) => ({
 
     "@media(max-width: 1200px) and (min-width: 901px)": {
       backgroundImage: `url(${Bg})`,
-      paddingBottom: "45%", 
+      paddingBottom: "45%",
     },
 
     "@media(max-width: 900px) and (min-width: 600px)": {
       backgroundImage: `url(${Bg})`,
-      paddingBottom: "55%", 
+      paddingBottom: "55%",
     },
     "@media(max-width: 595px)": {
       backgroundImage: `url(${Bg})`,
-      paddingBottom: "100%", 
+      paddingBottom: "100%",
     },
 
     "&::before": {
@@ -81,17 +81,25 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "120%",
 
     "@media(max-width: 1300px) and (min-width: 900px)": {
-      width:'80%'
+      width: "80%",
     },
 
     "@media(max-width: 900px) and (min-width: 600px)": {
-      width:'100%'
+      width: "100%",
     },
     "@media(max-width: 595px)": {
-      width:'100%'
+      width: "100%",
     },
   },
-
+  divider: {
+    background:
+      "transparent linear-gradient(90deg, #00FFBA 0%, #143D66 100%) 0% 0% no-repeat padding-box",
+    height: "7px",
+    margin: "auto",
+    borderRadius: "4px",
+    marginTop: "10px",
+    marginBottom: "25px",
+  },
   eAdvizeConsultantReg_insideContent: {
     width: "auto",
     height: "auto",
@@ -156,7 +164,7 @@ export const useStyles = makeStyles((theme) => ({
     lineHeight: "12px !important",
     color: "#596571",
     textAlign: "left",
-    margin: "1rem 0 !important",  
+    margin: "1rem 0 !important",
   },
   button: {
     marginTop: "1.5rem !important",
@@ -169,7 +177,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     marginTop: "1rem !important",
     "@media(max-width: 595px)": {
-      flexDirection:'column',
+      flexDirection: "column",
       lineHeight: 2.5,
     },
   },

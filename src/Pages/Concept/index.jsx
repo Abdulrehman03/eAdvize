@@ -38,7 +38,6 @@ const QontoStepIconRoot = styled("div")(({ theme, ownerState }) => ({
 
 function QontoStepIcon(props) {
   const { active, completed, className } = props;
-
   return (
     <QontoStepIconRoot ownerState={{ active }} className={className}>
       <div className="QontoStepIcon-circle" />
@@ -110,10 +109,16 @@ const Concept = () => {
   ];
   return (
     <Layout>
+      <div className={classes.skewDiv}></div>
       <section className={classes.sectionOne}>
-        <Container>
-          <Grid pt={10} pb={10} container>
-            <Grid item xs={12} lg={6}>
+        <Container className={classes.sectionOneContent}>
+          <Grid
+            pt={10}
+            pb={10}
+            container
+            className={`${matches && classes.mobilePadding}`}
+          >
+            <Grid item xs={12} sm={12} lg={6} order={{ xs: 2, md: 1 }}>
               <h3 className={classes.headingText}>
                 Travailler avec les freelances, c’est faire appel aux
                 compétences de la plus grande communauté d’experts.
@@ -132,8 +137,14 @@ const Concept = () => {
                 Je suis Client
               </Button>
             </Grid>
-            <Grid item xs={12} lg={6}>
+            <Grid item xs={12} sm={12} lg={6} order={{ xs: 1, md: 2 }}>
               <img src={ConceptMainImg} width="100%" />
+              <div
+                className={` ${
+                  matches ? classes.mobileDiivider : classes.mobileDiividerHide
+                }`}
+                style={{ width: "90%" }}
+              ></div>
             </Grid>
           </Grid>
         </Container>
