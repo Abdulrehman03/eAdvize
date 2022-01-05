@@ -16,18 +16,19 @@ import Target from "../../../Assests/landing/target.png";
 import { useTheme } from "@mui/styles";
 import { useStyles } from "./style";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
-import landingTable from "../../../Assests/landing/landingTable.png";
+import LandingForm from "../LandingForm/";
 export const TableContent = () => {
   const theme = useTheme();
   const classes = useStyles(theme);
   const matches = useMediaQuery("(max-width:768px)");
+  const match = useMediaQuery("(max-width:900px)");
+
   return (
     <div>
       <Container
         className={classes.TableContent}
         style={{
-          display: matches ? "none" : "block",
+          display: match ? "none" : "block",
           marginBottom: matches ? "30px !important" : "100px",
         }}
       >
@@ -44,7 +45,9 @@ export const TableContent = () => {
         </p>
         <br />
         <div>
-          <img src={landingTable} width="100%" />
+          <LandingForm />
+          {/* samiiiii */}
+          {/* <img src={landingTable} width="100%" /> */}
         </div>
       </Container>
       <section style={{ backgroundColor: "#00ffba" }}>

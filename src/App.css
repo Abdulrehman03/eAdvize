@@ -59,3 +59,13 @@ h3 {
 .swiper-button-next::after {
   content: url("./public/right.png") !important;
 }
+
+.css-yafthl-MuiSlider-markLabel {
+  color: #143d66 !important;
+}
+.css-1gsv261 {
+  border-color: #00b180 !important;
+}
+.css-1ps6pg7-MuiPaper-root {
+  padding-top: 0px !important;
+}
