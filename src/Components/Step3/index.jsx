@@ -22,6 +22,10 @@ const Step3 = () => {
                     <Typography variant="h5" className={classes.title}>
                       Merci pour vos informations !
                     </Typography>
+                    <div
+                      className={classes.divider}
+                      style={{ width: "56px" }}
+                    ></div>
                     <Typography variant="body2" className={classes.subHead}>
                       Démarrons ensemble dès aujourd’hui.
                     </Typography>

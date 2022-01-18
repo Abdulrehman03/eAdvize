@@ -16,6 +16,7 @@ const Step2 = ({ finalStep }) => {
         <Grid item md={12} className={classes.col_1}>
           <div style={{ width: "88%" }}>
             <p className={classes.category}>Mon profil BeAdvize</p>
+            <div className={classes.divider} style={{ width: "56px" }}></div>
             <br />
             <div>
               <Grid container rowSpacing={1} className={classes.innerGridGroup}>

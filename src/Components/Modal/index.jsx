@@ -67,6 +67,7 @@ export default function CustomizedDialogs(props) {
           <Typography variant="h5" className={classes.title}>
             Connexion à mon compte BeAdvize
           </Typography>
+          <div className={classes.divider} style={{ width: "56px" }}></div>
           <Typography variant="body2" className={classes.subHead}>
             Pas encore membre BeAdvize ? Inscrivez-vous.
           </Typography>

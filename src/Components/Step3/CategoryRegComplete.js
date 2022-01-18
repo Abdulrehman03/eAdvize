@@ -5,7 +5,14 @@ export const useStyles = makeStyles((theme) => ({
   eAdvizeConsultantReg_topContainer: {
     backgroundColor: `#143D66`,
   },
-
+  divider: {
+    background:
+      "transparent linear-gradient(90deg, #00FFBA 0%, #143D66 100%) 0% 0% no-repeat padding-box",
+    height: "7px",
+    borderRadius: "4px",
+    marginTop: "5px",
+    marginBottom: "25px",
+  },
   eAdvizeConsultantReg_topContent: {
     display: "flex",
     webkitFlexDirection: "column",
