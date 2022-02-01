@@ -1,0 +1,55 @@
+// box section
+.TopAnnule_sectionWrap {
+  margin: 2rem 3rem;
+  padding: 0;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000045;
+  border: 5px solid #d3d3d3;
+  border-radius: 5px;
+
+  .gridLeft {
+    padding: 1rem 1rem;
+
+    .textLeft_box {
+      text-align: left;
+      font: normal normal 600 20px/30px Open Sans;
+      letter-spacing: 0px;
+      color: #143d66;
+    }
+    .gridLeft_flexSectionInside {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+
+      .headingLink {
+        text-align: left;
+        font: normal normal bold 16px/24px Open Sans;
+        color: #143d66;
+      }
+      p {
+        font: normal normal normal 16px/24px Open Sans;
+        color: #143d66;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .gridRight {
+    background: #d3d3d3 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 10px 10px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .gridRight_link {
+      border-radius: 7px;
+      font: normal normal 600 22px/30px Open Sans;
+      color: #fff;
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+// box section
+.TermineTabSec_sectionWrap {
+    margin: 2.5rem 3rem;
+    padding: 0;
+    box-shadow: 0px 3px 6px #00000045;
+    //   border: 0;
+    border-radius: 5px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+  
+    .gridLeft {
+      padding: 1rem 2rem;
+  
+      .textLeft_box {
+        text-align: left;
+        font: normal normal 600 22px/30px Open Sans;
+        letter-spacing: 0px;
+        color: #143d66;
+      }
+      .gridLeft_flexSectionInside {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+  
+        .headingLink {
+          text-align: left;
+          font: normal normal bold 18px/24px Open Sans;
+          color: #143d66;
+        }
+        .headingLinkOne {
+          font: normal normal bold 20px/25px Helvetica Neue;
+          letter-spacing: 0px;
+          color: #04c38f;
+        }
+        p {
+          font: normal normal normal 18px/24px Open Sans;
+          color: #143d66;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .btn_boxInside {
+          background: transparent;
+          font: normal normal bold 18px/25px Helvetica Neue;
+          letter-spacing: 0px;
+          color: #143d66;
+        }
+      }
+    }
+  
+    .gridRight_link {
+      border-radius: 7px;
+      font: normal normal 600 18px/24px Open Sans;
+      color: #ffffff;
+      width: 50%;
+      background: #143d66 0% 0% no-repeat padding-box;
+      border: 2px solid #143d66;
+      padding: 5px 1rem;
+    }
+  }
+  
