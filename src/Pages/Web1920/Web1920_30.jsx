@@ -44,144 +44,233 @@ const Web1920_30 = () => {
     setValue(newValue);
   };
   return (
-      <div className={classes.root}>
-        
+    <div className={classes.root}>
+      <div>
         <br />
-        <Box width="70%" p="4"  className={classes.container}>
+        <Box width="75%" p="4" className={classes.container}>
           <div className={classes.innerContainer}>
-            <div className={classes.title}>
-              <Typography variant="h4">Votre Candidature</Typography>
+            <div style={{ marginTop: "2rem" }}>
+              <p className={classes.title}>Votre Candidature</p>
               <div className={classes.divider} style={{ width: "56px" }}></div>
             </div>
             <div className={classes.quesContain}>
-              <Typography variant="h5" py={2}>
-              Décrivez vos meilleurs atouts pour cette mission </Typography>
-             <div className={classes.textbox1} > <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet.
-              </Typography>
+              <p className={classes.subtitle} py={2}>
+                Décrivez vos meilleurs atouts pour cette mission{" "}
+              </p>
+              <div className={classes.textbox1}>
+                {" "}
+                <Typography variant="body1">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                  sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </Typography>
               </div>
             </div>
             <div className={classes.quesContain}>
-              <Typography variant="h5" py={2}>
-              Vos missions les plus pertinentes en lien avec le projet du client </Typography>
-             <div className={classes.textbox}> <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet.
-              </Typography></div>
+              <p className={classes.subtitle} py={2}>
+                Vos missions les plus pertinentes en lien avec le projet du
+                client{" "}
+              </p>
+              <div className={classes.textbox}>
+                {" "}
+                <Typography variant="body1">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                  sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </Typography>
+              </div>
             </div>
-            <div style={{display:'flex'}} >
-              <Typography variant="boddy1" mt={2} >Ajouter un document &emsp;</Typography>
-            <button className={classes.simplebtn} > joinder
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-start",
+              }}
+            >
+              <p
+                style={{
+                  margin: "0px",
+                  font: "normal normal bold 20px/27px Open Sans",
+                  color: "#143D66",
+                }}
+              >
+                Ajouter un document &nbsp;
+              </p>
+              <button className={classes.tagbtn} style={{ width: "99px" }}>
+                joinder
               </button>
             </div>
             <div>
-              <Typography variant="boddy1" >A quelle moment pouvez-vous commencer cette mission ? &emsp;</Typography>
-              <button className={classes.simplebtn} style={{borderRadius:'6px'}} > Semaine prochaine
-              </button>
+              <p
+                style={{
+                  margin: "10px 0px",
+                  font: "normal normal bold 20px/27px Open Sans",
+                  color: "#143D66",
+                }}
+              >
+                A quelle moment pouvez-vous commencer cette mission ?
+              </p>
             </div>
-            <div>
-            <button className={classes.btn} style={{ marginRight: "8px" }}>
-            Envoyer
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-start",
+              }}
+            >
+              <button
+                className={classes.tagbtn}
+                style={{
+                  transform: " matrix(1, 0, 0, 1, 0, 0)",
+                  border: "2px solid #143D66",
+                  width: "191px",
+                }}
+              >
+                Semaine prochaine
               </button>
-              <button className={classes.tagbtn} style={{ margin: "0 8px" }}>
-              Annuler les modifications
+              <div>
+                {/* <DesktopDatePicker
+                    label="For desktop"
+                    value={value}
+                    minDate={new Date("2017-01-01")}
+                    onChange={(newValue) => {
+                      setValue(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  /> */}
+              </div>
+            </div>
+            <div className={classes.btnContainer}>
+              <button
+                className={classes.btn}
+                color="#143D66"
+                onClick={() => {
+                  stepChange(1);
+                }}
+              >
+                Envoyer
+              </button>
+              <button
+                className={classes.tagbtn}
+                style={{
+                  margin: "0 16px",
+                  width: "320px",
+                  font: "normal normal 600 20px/27px Open Sans",
+                }}
+              >
+                Annuler les modifications
               </button>
             </div>
           </div>
-          
         </Box>
         <br />
-        <Box width="70%" p="4" style={{border:"5px solid #D3D3D3"}} className={classes.container}>
-          <div className={classes.innerContainer}>
-            <div className={classes.title}>
-              <div style={{ display: "flex" }}>
-                {" "}
-                <Typography variant="h5">Titre</Typography>
-                <Typography variant="body1" mt={1}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                </Typography>
+        <Box>
+          <br />
+          <Box
+            width="75%"
+            p="4"
+            className={classes.container}
+            style={{ border: "5px solid #D3D3D3" }}
+          >
+            <div className={classes.innerContainer}>
+              <div className={classes.titlecontainer}>
+                <p className={classes.title} sx={{ display: "inline" }}>
+                  Titre &emsp;
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    font: "normal normal normal 22px/30px Open Sans",
+                    letterSpacing: "0px",
+                    color: "#143D66",
+                    opacity: "1",
+                    margin: "0px",
+                  }}
+                  sx={{ display: "inline" }}
+                >
+                  Lorem ipsum dolor sit amet, consetetur
+                </p>
               </div>
-              <div className={classes.divider} style={{ width: "56px" }}></div>
-            </div>
-            <div>
-              <Grid container>
-                <Grid md={4}>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Poste proposé</Typography>
-                    <Typography variant="body2">Lorem Ipsum</Typography>
-                  </div>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Lieu de travail</Typography>
-                    <Typography variant="body2">Paris</Typography>
-                  </div>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Mode de facturation</Typography>
-                    <Typography variant="body2">450 Euros</Typography>
-                  </div>
-                </Grid>
-                <Grid md={4}>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">
-                      Séniorite du consultant
-                    </Typography>
-                    <Typography variant="body2">3 / 5 ans</Typography>
-                  </div>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Début de la mission</Typography>
-                    <Typography variant="body2">Des que Possible</Typography>
-                  </div>
-                </Grid>
-                <Grid md={4}>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Fréquence par semaine</Typography>
-                    <Typography variant="body2">Temps Plein</Typography>
-                  </div>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Durée de la mission</Typography>
-                    <Typography variant="body2">3 a 5 mois</Typography>
-                  </div>
-                </Grid>
-              </Grid>
-            </div>
-            <div>
+              <div className={classes.divider}></div>
               <div>
-                <Typography variant="h5" mt={3}>
-                  Description
-                </Typography>
-                <div
-                  className={classes.divider}
-                  style={{ width: "56px" }}
-                ></div>
-                <di>
-                  <Typography variant="body1" my={2}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore Lorem ipsum
-                    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero
-                    eos et accusam et justo duo dolores et ea rebum
-                  </Typography>
-                  <Typography variant="body1" my={2}>
+                <Grid container width="100%" mt={2}>
+                  <Grid sm={12} md={4} pr={1}>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Poste proposé</p>
+                      <p className={classes.description}>Lorem Ipsum</p>
+                    </Box>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Lieu de travail</p>
+                      <p className={classes.description}>Paris</p>
+                    </Box>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Mode de facturation</p>
+                      <p className={classes.description}>Forfait</p>
+                    </Box>
+                  </Grid>
+                  <Grid sm={12} md={4} pr={1}>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>
+                        Séniorité du consultant
+                      </p>
+                      <p className={classes.description}>3 / 5 ans</p>
+                    </Box>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Début de la mission</p>
+                      <p className={classes.description}>Des que Possible</p>
+                    </Box>
+                  </Grid>
+                  <Grid sm={12} md={4} pr={1}>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Fréquence par semaine</p>
+                      <p className={classes.description}>Temps Plein</p>
+                    </Box>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Durée de la mission</p>
+                      <p className={classes.description}>3 a 5 mois</p>
+                    </Box>
+                  </Grid>
+                </Grid>
+              </div>
+
+              {/* Descraption */}
+              <div className={classes.title} style={{ marginTop: "2rem" }}>
+                <p className={classes.subtitle}>Description</p>
+                <div className={classes.divider}></div>
+                <div style={{ marginTop: "1rems" }}>
+                  <p className={classes.description}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, Lorem ipsum dolor sit amet, consetetur
-                    sadipscing elitr, sed diam nonumy sed diam voluptua. At vero
-                    eos et accusam et justo duo dolores et ea rebum
-                  </Typography>
-                </di>
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                    ipsum dolor sit amet
+                  </p>
+                </div>
+                <div style={{ marginTop: "1rem" }}>
+                  <p className={classes.description}>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                    ipsum dolor sit amet
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+            <br />
+          </Box>
+          <br />
         </Box>
-        <br/>
-      </div>
 
+        <br />
+      </div>
+    </div>
   );
 };
 export default Web1920_30;

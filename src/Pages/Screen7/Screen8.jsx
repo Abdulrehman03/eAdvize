@@ -12,121 +12,131 @@ const Screen8 = () => {
   return (
     <Layout>
       <div className={classes.root}>
-        <br/>
+        <br />
         <Box width="70%" p="4" className={classes.container}>
           <div className={classes.innerContainer}>
-            <div className={classes.title}>
-              <Typography variant="h3">Mes infos d’entreprise et de contact</Typography>
-               <div
-                  className={classes.divider}
-                  style={{ width: "56px" }}
-                ></div>
-               
+            <div>
+              <p className={classes.title}>
+                Mes infos d’entreprise et de contact
+              </p>
+              <div className={classes.divider}></div>
             </div>
             <form className={classes.form}>
-              <div className={classes.formSecSetion}  >
-              <div>
-                  <Typography variant="body1" style={{color:"#143D66"}} >Votre entreprise</Typography>
-              </div>
-              <div className={classes.rowscontain}>
-                <Grid container width="100%">
-                  <Grid  md={4} lg={3} >
-                    <div className={classes.leftbox}> 
-                    <Typography variant="h6" className={classes.typograp} >
-                  Nom
-                  </Typography>
-                  </div>
-                  </Grid>
-                  <Grid  md={8} lg={9}>
-                    <input
-                      type="text"
-                      className={classes.inputs1}
-                      name="Paris"
-                      value={paris}
-                      placeholder="Ex : Consultant études sectorielles"
-                    />
-                  </Grid>
-                </Grid>
-              </div>
-               <div className={classes.rowscontain}>
-                <Grid container width="100%">
-                  <Grid  md={4} lg={3}>
-                    <div className={classes.leftbox}> 
-                    <Typography variant="h6" className={classes.typograp} >
-                     Telephone
-                     </Typography>
+              <div className={classes.formSecSetion}>
+                <div>
+                  <label className={classes.inputLabel}>Votre entreprise</label>
+                </div>
+                <div className={classes.rowscontain}>
+                  <Grid container width="100%">
+                    <Grid md={4} lg={3}>
+                      <div className={classes.leftbox}>
+                        <Typography className={classes.typograp}>
+                          Nom
+                        </Typography>
                       </div>
+                    </Grid>
+                    <Grid md={8} lg={9}>
+                      <input
+                        type="text"
+                        className={classes.inputs1}
+                        name="Paris"
+                        value={paris}
+                        placeholder="Ex : Consultant études sectorielles"
+                      />
+                    </Grid>
                   </Grid>
-                  <Grid md={8} lg={9}>
-                    <input
-                      type="text"
-                      className={classes.inputs}
-                      name="Paris"
-                      value={paris}
-                      placeholder="Ex : Consultant études sectorielles "
-                    />
+                </div>
+                <div className={classes.rowscontain}>
+                  <Grid container width="100%">
+                    <Grid md={4} lg={3}>
+                      <div className={classes.leftbox}>
+                        <Typography className={classes.typograp}>
+                          Telephone
+                        </Typography>
+                      </div>
+                    </Grid>
+                    <Grid md={8} lg={9}>
+                      <input
+                        type="text"
+                        className={classes.inputs}
+                        name="Paris"
+                        value={paris}
+                        placeholder="Ex : Consultant études sectorielles "
+                      />
+                    </Grid>
                   </Grid>
-                </Grid>
+                </div>
               </div>
+              <div className={classes.formSecSetion}>
+                <div>
+                  <label className={classes.inputLabel}>Vos coordonnées</label>
+                </div>
+                <div className={classes.rowscontain}>
+                  <Grid container width="100%">
+                    <Grid md={4} lg={3}>
+                      <div className={classes.leftbox}>
+                        <Typography className={classes.typograp}>
+                          E-mail
+                        </Typography>
+                      </div>
+                    </Grid>
+                    <Grid md={8} lg={9}>
+                      <input
+                        type="text"
+                        className={classes.inputs}
+                        name="Paris"
+                        value={paris}
+                        placeholder="Ex : Consultant études sectorielles"
+                      />
+                    </Grid>
+                  </Grid>
+                </div>
+                <div className={classes.rowscontain}>
+                  <Grid container width="100%">
+                    <Grid md={4} lg={3}>
+                      <div className={classes.leftbox}>
+                        <Typography className={classes.typograp}>
+                          Telephone
+                        </Typography>
+                      </div>
+                    </Grid>
+                    <Grid md={8} lg={9}>
+                      <input
+                        type="text"
+                        className={classes.inputs}
+                        name="Paris"
+                        value={paris}
+                        placeholder="Ex : Consultant études sectorielles "
+                      />
+                    </Grid>
+                  </Grid>
+                </div>
               </div>
-              <div className={classes.formSecSetion}  >
-              <div>
-                  <Typography variant="body1" style={{color:"#143D66"}} >Vos coordonnées</Typography>
-              </div>
-              <div className={classes.rowscontain}>
-                <Grid container width="100%">
-                  <Grid  md={4} lg={3} >
-                    <div className={classes.leftbox}> 
-                    <Typography variant="h6" className={classes.typograp} >
-                  E-mail
+              <div className={classes.formSecSetion}>
+                <div>
+                  <Typography
+                    style={{
+                      color: "#143D66",
+                      font: "normal normal 600 25px/34px Open Sans",
+                    }}
+                  >
+                    Comment souhaitez-vous que nous vous contactions ?
                   </Typography>
-                  </div>
-                  </Grid>
-                  <Grid  md={8} lg={9}>
-                    <input
-                      type="text"
-                      className={classes.inputs}
-                      name="Paris"
-                      value={paris}
-                      placeholder="Ex : Consultant études sectorielles"
-                    />
-                  </Grid>
-                </Grid>
-              </div>
-               <div className={classes.rowscontain}>
-                <Grid container width="100%">
-                  <Grid  md={4} lg={3}>
-                    <div className={classes.leftbox}> 
-                    <Typography variant="h6" className={classes.typograp} >
-                  
-                     Telephone 
-                     </Typography></div>
-                  </Grid>
-                  <Grid md={8} lg={9}>
-                    <input
-                      type="text"
-                      className={classes.inputs}
-                      name="Paris"
-                      value={paris}
-                      placeholder="Ex : Consultant études sectorielles "
-                    />
-                  </Grid>
-                </Grid>
-              </div>
-              </div>
-                  <div className={classes.formSecSetion}>
-                      <div>
-                  <Typography variant="body1" style={{color:"#143D66"}} >Comment souhaitez-vous que nous vous contactions ?</Typography>
-              </div>
-              <div className={classes.formtagbtncon} >
+                </div>
+                <div className={classes.formtagbtncon}>
                   <button className={classes.tagbtn}>Par Email</button>
-                      <button className={classes.tagbtn} style={{margin:'0 16px'}} >Par Téléphone</button>
-                      
+                  <button
+                    className={classes.tagbtn}
+                    style={{ margin: "0 2em" }}
+                  >
+                    Par Téléphone
+                  </button>
+                </div>
               </div>
-                  </div>
-              <div >
-
-                <button className={classes.btn}>Valider mon profil client</button>
+              <div>
+                <button className={classes.btnsrc8}>
+                  Valider mon profil client
+                </button>
               </div>
             </form>
           </div>

@@ -10,13 +10,13 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import EditIcon from "@mui/icons-material/Edit";
 
-function createData(name, calories, fat, carbs, protein, edit) {
-  return { name, calories, fat, carbs, protein, edit };
+function createData(name, calories, fat, carbs) {
+  return { name, calories, fat, carbs };
 }
 
 const rows = [
   createData(
-    "10.12.20",
+    "#1",
     "Lorem ipsum dolor sit amet, consetetur",
     "37,500",
     "9500,00 €",
@@ -24,7 +24,7 @@ const rows = [
     "FA-32-L"
   ),
   createData(
-    "10.12.20",
+    "#2",
     "Lorem ipsum dolor sit amet, consetetur",
     "43,500",
     "450,00 €",
@@ -32,7 +32,7 @@ const rows = [
     "FA-32-L"
   ),
   createData(
-    "10.12.20",
+    "#3",
     "Lorem ipsum dolor sit amet, consetetur",
     "77,500",
     "9500,00 €",
@@ -41,7 +41,7 @@ const rows = [
   ),
 ];
 
-const Web1920_29 = ({ stepChange}) => {
+const Web1920_29 = ({ stepChange }) => {
   const theme = useTheme();
   const classes = useStyle(theme);
   const [value, setValue] = React.useState(new Date("2014-08-18T21:11:54"));
@@ -50,75 +50,80 @@ const Web1920_29 = ({ stepChange}) => {
     setValue(newValue);
   };
   return (
-      <div className={classes.root}>
-        
+    <div className={classes.root}>
+      <div>
         <br />
-        <Box width="70%" p="4" style={{border:"5px solid #D3D3D3"}} className={classes.container}>
+        <Box
+          width="70%"
+          p="4"
+          style={{ border: "5px solid #D3D3D3" }}
+          className={classes.container}
+        >
           <div className={classes.innerContainer}>
-            <div className={classes.title}>
-              <Typography variant="h4">Ma définition du projet</Typography>
-              <div className={classes.divider} style={{ width: "56px" }}></div>
+            <div>
+              <p className={classes.title}>Votre Proposition</p>
+              <div className={classes.divider}></div>
             </div>
             <div className={classes.quesContain}>
-              <Typography variant="h5" py={2}>
+              <p className={classes.subtitle} py={2}>
                 Vos retours sur cette mission : Interrogations, pertinence de
                 votre profil, Intérêt professionnel
-              </Typography>
-              <Typography variant="body1">
+              </p>
+              <p className={classes.description}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
                 justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                 takimata sanctus est Lorem ipsum dolor sit amet.
-              </Typography>
+              </p>
             </div>
             <div className={classes.quesContain}>
-              <Typography variant="h5" py={2}>
+              <p className={classes.subtitle} py={2}>
                 Vos missions précédente en lien avec le projet du client
-              </Typography>
-              <Typography variant="body1">
+              </p>
+              <p className={classes.description}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
                 justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                 takimata sanctus est Lorem ipsum dolor sit amet.
-              </Typography>
+              </p>
             </div>
             <Grid container>
               <Grid md={3}>
-                <div className={classes.quesContain}>
-                  <Typography variant="h5" py={2}>
+                <div>
+                  <p className={classes.subtitle} py={2}>
                     TJM
-                  </Typography>
-                  <Typography variant="h5">450,00 €</Typography>
+                  </p>
+                  <p className={classes.subtitle}>450,00 €</p>
                 </div>{" "}
               </Grid>
               <Grid md={9}>
                 {" "}
-                <div className={classes.quesContain}>
-                  <Typography variant="h5" py={2}>
+                <div>
+                  <p className={classes.subtitle} py={2}>
                     Disponibilite
-                  </Typography>
-                  <Typography variant="body1">Semaine prochaine</Typography>
+                  </p>
+                  <p className={classes.description}>Semaine prochaine</p>
                 </div>{" "}
               </Grid>
             </Grid>
-            <div className={classes.title}>
-              <Typography variant="h4">Facturation</Typography>
-              <div className={classes.divider} style={{ width: "56px" }}></div>
+            <div style={{ marginTop: "2rem" }}>
+              <p className={classes.title}>Chiffrage</p>
+              <div className={classes.divider}></div>
             </div>
             <Table
               sx={{ minWidth: 550 }}
-              style={{ overflow: "scroll" }}
+              style={{ overflow: "scroll", width: "80%", marginTop: "1rem" }}
               aria-label="simple table"
             >
               <TableHead>
                 <TableRow>
-                  <TableCell>Date</TableCell>
-                  <TableCell align="left">Etape</TableCell>
+                  <TableCell>Etape</TableCell>
+                  <TableCell align="left">Description</TableCell>
                   <TableCell align="left">Montant HT</TableCell>
                   <TableCell align="left">Montant TTC</TableCell>
-                  </TableRow>
+                </TableRow>
               </TableHead>
               <TableBody>
                 {rows?.map((row) => (
@@ -126,109 +131,164 @@ const Web1920_29 = ({ stepChange}) => {
                     key={row.name}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
-                    <TableCell component="th" scope="row">
+                    <TableCell
+                      component="th"
+                      scope="row"
+                      style={{ font: "normal 600 18px/24px Open Sans" }}
+                    >
                       {row.name}
                     </TableCell>
-                    <TableCell align="left">{row.calories}</TableCell>
-                    <TableCell align="left">{row.fat}€</TableCell>
-                    <TableCell align="left">{row.carbs}</TableCell>
+                    <TableCell
+                      align="left"
+                      style={{
+                        font: "normal normal normal 18px/22px Helvetica Neue",
+                      }}
+                    >
+                      {row.calories}
+                    </TableCell>
+                    <TableCell
+                      align="left"
+                      style={{
+                        font: "normal normal bold 18px/24px Open Sans",
+                      }}
+                    >
+                      {row.fat}€
+                    </TableCell>
+                    <TableCell
+                      align="left"
+                      style={{
+                        font: "normal normal bold 18px/24px Open Sans",
+                      }}
+                    >
+                      {row.carbs}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
-
+            <div className={classes.quesContain}>
+              <p className={classes.subtitle} style={{ color: "#04C38F" }}>
+                Total TTC
+              </p>
+              <p className={classes.description}>19 450,00</p>
+            </div>{" "}
             <div>
-              <button className={classes.tagbtn} style={{ margin: "0 8px" }}>
+              <button
+                className={classes.tagbtn}
+                style={{
+                  transform: " matrix(1, 0, 0, 1, 0, 0)",
+                  border: "2px solid #143D66",
+                  width: "191px",
+                }}
+              >
                 Retour au dasboard
               </button>
             </div>
           </div>
-          
         </Box>
         <br />
-        <Box width="70%" p="4" style={{border:"5px solid #D3D3D3"}} className={classes.container}>
-          <div className={classes.innerContainer}>
-            <div className={classes.title}>
-              <div style={{ display: "flex" }}>
-                {" "}
-                <Typography variant="h5">Titre</Typography>
-                <Typography variant="body1" mt={1}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                </Typography>
+        <Box>
+          <br />
+          <Box
+            width="75%"
+            p="4"
+            className={classes.container}
+            style={{ border: "5px solid #D3D3D3" }}
+          >
+            <div className={classes.innerContainer}>
+              <div className={classes.titlecontainer}>
+                <p className={classes.title} sx={{ display: "inline" }}>
+                  Titre &emsp;
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    font: "normal normal normal 22px/30px Open Sans",
+                    letterSpacing: "0px",
+                    color: "#143D66",
+                    opacity: "1",
+                    margin: "0px",
+                  }}
+                  sx={{ display: "inline" }}
+                >
+                  Lorem ipsum dolor sit amet, consetetur
+                </p>
               </div>
-              <div className={classes.divider} style={{ width: "56px" }}></div>
-            </div>
-            <div>
-              <Grid container>
-                <Grid md={4}>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Poste proposé</Typography>
-                    <Typography variant="body2">Lorem Ipsum</Typography>
-                  </div>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Lieu de travail</Typography>
-                    <Typography variant="body2">Paris</Typography>
-                  </div>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Mode de facturation</Typography>
-                    <Typography variant="body2">450 Euros</Typography>
-                  </div>
-                </Grid>
-                <Grid md={4}>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">
-                      Séniorite du consultant
-                    </Typography>
-                    <Typography variant="body2">3 / 5 ans</Typography>
-                  </div>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Début de la mission</Typography>
-                    <Typography variant="body2">Des que Possible</Typography>
-                  </div>
-                </Grid>
-                <Grid md={4}>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Fréquence par semaine</Typography>
-                    <Typography variant="body2">Temps Plein</Typography>
-                  </div>
-                  <div style={{ margin: "5px" }}>
-                    <Typography variant="h6">Durée de la mission</Typography>
-                    <Typography variant="body2">3 a 5 mois</Typography>
-                  </div>
-                </Grid>
-              </Grid>
-            </div>
-            <div>
+              <div className={classes.divider}></div>
               <div>
-                <Typography variant="h5" mt={3}>
-                  Description
-                </Typography>
-                <div
-                  className={classes.divider}
-                  style={{ width: "56px" }}
-                ></div>
-                <di>
-                  <Typography variant="body1" my={2}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore Lorem ipsum
-                    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero
-                    eos et accusam et justo duo dolores et ea rebum
-                  </Typography>
-                  <Typography variant="body1" my={2}>
+                <Grid container width="100%" mt={2}>
+                  <Grid sm={12} md={4} pr={1}>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Poste proposé</p>
+                      <p className={classes.description}>Lorem Ipsum</p>
+                    </Box>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Lieu de travail</p>
+                      <p className={classes.description}>Paris</p>
+                    </Box>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>TJM</p>
+                      <p className={classes.description}>450 Euros</p>
+                    </Box>
+                  </Grid>
+                  <Grid sm={12} md={4} pr={1}>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>
+                        Séniorité du consultant
+                      </p>
+                      <p className={classes.description}>3 / 5 ans</p>
+                    </Box>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Début de la mission</p>
+                      <p className={classes.description}>Des que Possible</p>
+                    </Box>
+                  </Grid>
+                  <Grid sm={12} md={4} pr={1}>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Fréquence par semaine</p>
+                      <p className={classes.description}>Temps Plein</p>
+                    </Box>
+                    <Box py={1}>
+                      <p className={classes.subtitle}>Durée de la mission</p>
+                      <p className={classes.description}>3 a 5 mois</p>
+                    </Box>
+                  </Grid>
+                </Grid>
+              </div>
+
+              {/* Descraption */}
+              <div className={classes.title} style={{ marginTop: "2rem" }}>
+                <p className={classes.subtitle}>Description</p>
+                <div className={classes.divider}></div>
+                <div style={{ marginTop: "1rems" }}>
+                  <p className={classes.description}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, Lorem ipsum dolor sit amet, consetetur
-                    sadipscing elitr, sed diam nonumy sed diam voluptua. At vero
-                    eos et accusam et justo duo dolores et ea rebum
-                  </Typography>
-                </di>
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                    ipsum dolor sit amet
+                  </p>
+                </div>
+                <div style={{ marginTop: "1rem" }}>
+                  <p className={classes.description}>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                    ipsum dolor sit amet
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+            <br />
+          </Box>
+          <br />
         </Box>
-        <br/>
+        <br />
       </div>
+    </div>
   );
 };
 export default Web1920_29;
