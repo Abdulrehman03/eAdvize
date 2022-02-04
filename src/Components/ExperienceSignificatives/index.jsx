@@ -1,14 +1,19 @@
 import React from "react";
 import { useTheme } from "@mui/styles";
-import { useStyles } from "./arthurStyled";
+import { useStyles } from "./ExperienceSignificatives";
 import Grid from "@mui/material/Grid";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import Checkbox from "@mui/material/Checkbox";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Profile from "../../Assests/profile.png";
+import CloseIcon from "@mui/icons-material/Close";
 import Twitter from "../../Assests/twitter.png";
 import Linkedin from "../../Assests/linkedin.png";
-import Building from "../../Assests/building.png";
-import CloseIcon from "@mui/icons-material/Close";
-
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 const index = () => {
   const theme = useTheme();
   const classes = useStyles(theme);
@@ -22,7 +27,11 @@ const index = () => {
                 <div className={classes.boxWrapper}>
                   <div className={classes.boxWrapOne}>
                     <div className={classes.spaceWrapper}>
-                      <img src={Profile} className={classes.accountCircle} />
+                      <img
+                        src={Profile}
+                        alt=""
+                        className={classes.accountCircle}
+                      />
                       <h2 className={classes.boxNameHeading}>Arthur Smith </h2>
                       <h3 className={classes.boxDataHeading}>Coach Agile</h3>
                       <div
@@ -74,7 +83,7 @@ const index = () => {
                             fontWeight: "bold",
                           }}
                         />
-                        &nbsp; Diplômes
+                        &nbsp;Diplômes
                       </p>
                     </div>
                   </div>
@@ -133,7 +142,7 @@ const index = () => {
                         <span>
                           <img src={Twitter} />
                         </span>
-                        &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <span>
                           <img src={Linkedin} />
                         </span>
@@ -196,88 +205,149 @@ const index = () => {
                     </p>
                   </div>
                 </div>
-                <div className={classes.slideThreeWrap}>
-                  <div className={classes.spaceWrapper}>
-                    <p className={classes.headingWrapper}>
+                <div className={classes.asideForm}>
+                  <div className={classes.asideGroup}>
+                    <Typography variant="h2" className={classes.asideHeading}>
                       Mes expériences significatives
-                    </p>
+                    </Typography>
                     <div
                       className={classes.divider}
                       style={{ width: "56px" }}
                     ></div>
-                    <div classsName={classes.asideWrapper}>
-                      <div className={classes.asideOneWrap}>
-                        <div className={classes.slideHeading}>
-                          <h2 className={classes.slideEnter}>
-                            <span>
-                              <img src={Building} />
-                            </span>
-                            Entreprise
-                          </h2>
-                          <EditOutlinedIcon />
-                        </div>
-                        <Grid container spacing={12}>
-                          <Grid item={4}>
-                            <div className={classes.featuredHeading}>
-                              Rôle dans l’entrepr
-                            </div>
-                          </Grid>
-                          <Grid item={4}>
-                            <div className={classes.slideEnter}>Freelance</div>
-                          </Grid>
-                          <Grid item={4}>
-                            <div className={classes.slideDate}>
-                              02.2018 à 06.2020
-                            </div>
-                          </Grid>
+                    <div className={classes.formGroup}>
+                      <p className={classes.formHeading}>
+                        Ajouter / modifiier une expérience
+                      </p>
+                      <Grid container mb={2} mt={2}>
+                        <Grid item md={2}>
+                          <p className={classes.formLabel}>Entreprise</p>
                         </Grid>
+                        <Grid item md={10}>
+                          <TextField
+                            variant="outlined"
+                            style={{
+                              width: "100%",
+                              padding: "0px",
+                              border: "1px solid #143D66",
+                              borderRadius: "5px",
+                              outline: "none !important",
+                            }}
+                            className={classes.formInput}
+                          />
+                        </Grid>
+                      </Grid>
 
-                        <p className={classes.slideParagraph}>
-                          Lorem ipsum dolor sit amet, consetetur sadipscing
-                          elitr, sed diam nonumy eirmod tempor invidunt ut
-                          labore et dolore magna aliquyam erat, sed diam
-                          voluptua. At vero eos Lorem ipsum dolor sit amet,
-                          consetetur sadipscing elitr, sed diam nonumy eirmod
-                          tempor invidunt ut labore et dolore magna aliquyam
-                          erat, sed diam voluptua. At vero eos
-                        </p>
+                      <Grid container mt={2}>
+                        <Grid item md={1}>
+                          <p className={classes.formLabel}>Titre</p>
+                        </Grid>
+                        <Grid item md={11}>
+                          <TextField
+                            variant="outlined"
+                            style={{
+                              width: "100%",
+                              padding: "0px",
+                              border: "1px solid #143D66",
+                              borderRadius: "5px",
+                              outline: "none !important",
+                            }}
+                            className={classes.formInput}
+                          />
+                        </Grid>
+                      </Grid>
+                      <div className={classes.checkboxGroup}>
+                        <div className={classes.checkboxGroupOne}>
+                          <Checkbox />
+                          <label className={classes.checkboxLabelText}>
+                            En tant que free-lance
+                          </label>
+                        </div>
+                        <div
+                          className={classes.checkboxGroupTwo}
+                          style={{ marginTop: "-10px" }}
+                        >
+                          <Checkbox />
+                          <label className={classes.checkboxLabelText}>
+                            J’occupe actuellement ce poste
+                          </label>
+                        </div>
                       </div>
-                      <br />
-                      <div className={classes.asideTwoWrap}>
-                        <div className={classes.slideHeading}>
-                          <h2 className={classes.slideEnter}>
-                            <span>
-                              <img src={Building} />
-                            </span>
-                            Entreprise
-                          </h2>
-                          <EditOutlinedIcon />
-                        </div>
-                        <Grid container spacing={12}>
-                          <Grid item={4}>
-                            <div className={classes.featuredHeading}>
-                              Rôle dans l’entrepr
-                            </div>
+                      <div className={classes.inputFieldGroup}>
+                        <Grid container spacing={4}>
+                          <Grid item md={6} className={classes.flexTextField}>
+                            <p className={classes.formLabel}>Début</p>
+                            <TextField
+                              variant="outlined"
+                              style={{
+                                width: "100%",
+                                padding: "0px",
+                                border: "1px solid #143D66",
+                                borderRadius: "5px",
+                                outline: "none",
+                              }}
+                              className={classes.formInput}
+                            />
                           </Grid>
-                          <Grid item={4}>
-                            <div className={classes.slideEnter}>Freelance</div>
-                          </Grid>
-                          <Grid item={4}>
-                            <div className={classes.slideDate}>
-                              02.2018 à 06.2020
-                            </div>
+                          <Grid item md={6} className={classes.flexTextField}>
+                            <p className={classes.formLabel}>Titre</p>
+                            <TextField
+                              variant="outlined"
+                              style={{
+                                width: "100%",
+                                padding: "0px",
+                                border: "1px solid #143D66",
+                                borderRadius: "5px",
+                                outline: "none",
+                              }}
+                              className={classes.formInput}
+                            />
                           </Grid>
                         </Grid>
-
-                        <p className={classes.slideParagraph}>
-                          Lorem ipsum dolor sit amet, consetetur sadipscing
-                          elitr, sed diam nonumy eirmod tempor invidunt ut
-                          labore et dolore magna aliquyam erat, sed diam
-                          voluptua. At vero eos Lorem ipsum dolor sit amet,
-                          consetetur sadipscing elitr, sed diam nonumy eirmod
-                          tempor invidunt ut labore et dolore magna aliquyam
-                          erat, sed diam voluptua. At vero eos
-                        </p>
+                      </div>
+                      <div className={classes.textAreaWrapper}>
+                        <div className={classes.textAreaFieldOne}>
+                          <p className={classes.textAreaPara}>Description</p>
+                          <TextareaAutosize className={classes.textAreaField} />
+                        </div>
+                        <div className={classes.textAreaFieldTwo}>
+                          <p className={classes.textAreaPara}>
+                            Compétences mises en oeuvres
+                          </p>
+                          <TextareaAutosize className={classes.textAreaField} />
+                        </div>
+                      </div>
+                      <div className={classes.boxWrapper}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                          }}
+                          style={{ paddingTop: "20px" }}
+                        >
+                          <div
+                            className={classes.companyData}
+                            style={{ display: "flex" }}
+                          >
+                            <DeleteOutlineIcon style={{ color: "#143D66" }} />
+                            <p className={classes.companyText}>
+                              &nbsp;Supprimer
+                            </p>
+                          </div>
+                          <div style={{ display: "flex", gap: "17px" }}>
+                            <Button
+                              variant="outlined"
+                              className={classes.btnOne}
+                            >
+                              Annuler
+                            </Button>
+                            <Button
+                              variant="contained"
+                              className={classes.btnTwo}
+                            >
+                              Valider
+                            </Button>
+                          </div>
+                        </Box>
                       </div>
                     </div>
                   </div>
@@ -326,22 +396,18 @@ const index = () => {
                         style={{ width: "56px" }}
                       ></div>
                       <div className={classes.profileWrapper}>
-                        <div className={classes.boxWrap}>
-                          <img
-                            src={Profile}
-                            className={classes.accountWrapper}
-                          />
-                          <p
-                            style={{
-                              display: "inline-block",
-                              paddingLeft: "10px",
-                            }}
-                            className={classes.ecoleHeading}
-                          >
-                            Nom du client{" "}
-                            <p style={{ marginTop: "0px" }}>Entreprise</p>
-                          </p>
-                        </div>
+                        <br />
+                        <img src={Profile} className={classes.accountWrapper} />
+                        <p
+                          style={{
+                            display: "inline-block",
+                            paddingLeft: "10px",
+                          }}
+                          className={classes.ecoleHeading}
+                        >
+                          Nom du client{" "}
+                          <p style={{ marginTop: "0px" }}>Entreprise</p>
+                        </p>
                         <p className={classes.loremParagraph}>
                           Lorem ipsum dolor sit amet, consetetur sadipscing
                           elitr, sed diam nonumy eirmod tempor invidunt ut

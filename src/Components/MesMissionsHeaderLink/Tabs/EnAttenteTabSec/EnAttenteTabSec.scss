@@ -41,6 +41,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -0.37px;
+    margin-right: -0.37px;
+    margin-bottom: -0.37px;
+    position: relative !important;
+    right: -2px !important;
 
     .gridRight_link {
       border: 2px solid #ffffff;
@@ -52,11 +57,11 @@
 }
 
 .borderLine_insideWrapperBox {
-  border-bottom: 3px solid #143d66; 
+  border-bottom: 3px solid #143d66;
   margin: 3rem 3rem 3rem;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 // box section 2
@@ -99,13 +104,18 @@
 
   .gridRight {
     background: #143d66;
-    padding: 0; 
-    margin: 0; 
+    padding: 0;
+    margin: 0;
+    position: relative !important;
+    right: -2px !important;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -0.37px;
+    margin-right: -0.37px;
+    margin-bottom: -0.37px;
 
-    .gridRight_link { 
+    .gridRight_link {
       border-radius: 7px;
       font: normal normal 600 22px/30px Open Sans;
       color: #fff;
@@ -114,14 +124,13 @@
   }
 }
 
-
 // box section three
-.TopEnAttente_sectionWrapThree{
-    margin: 2rem 3rem;
+.TopEnAttente_sectionWrapThree {
+  margin: 2rem 3rem;
   padding: 0;
   box-shadow: 0px 3px 6px #00000045;
-  border: 5px solid  #00FFBA;
-  border-radius: 5px; 
+  border: 5px solid #00ffba;
+  border-radius: 5px;
 
   .gridLeft {
     padding: 1rem 2rem;
@@ -153,14 +162,20 @@
   }
 
   .gridRight {
-    background: transparent linear-gradient(270deg, #143D66 0%, #00FFBA 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(270deg, #143d66 0%, #00ffba 100%) 0%
+      0% no-repeat padding-box;
     border-radius: 5px;
-    padding: 0; 
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -0.37px;
+    position: relative !important;
+    right: -2px !important;
+    margin-right: -0.37px;
+    margin-bottom: -0.37px;
 
-    .gridRight_link { 
+    .gridRight_link {
       border-radius: 7px;
       font: normal normal 600 22px/30px Open Sans;
       color: #fff;

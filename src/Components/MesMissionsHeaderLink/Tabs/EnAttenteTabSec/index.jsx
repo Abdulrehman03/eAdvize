@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
+import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./EnAttenteTabSec.scss";
 
@@ -53,7 +54,9 @@ const EnAttenteTabSec = () => {
               </Grid>
 
               <Grid item md={4} sm={12} className="gridRight">
-                <a className="gridRight_link">Répondre</a>
+                <Button variant="outlined" className="gridRight_link">
+                  Répondre
+                </Button>
               </Grid>
             </Grid>
           </Grid>

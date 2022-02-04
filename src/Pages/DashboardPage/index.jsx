@@ -1,17 +1,17 @@
 import React from "react";
 import Layout from "../../Components/Layout/";
-import Arthur from "../../Components/ArthurSmith/";
+import Dashboard from "../../Components/DashboardPage";
 import { Container } from "@mui/material";
 
-const index = () => {
+const DashboardPage = () => {
   return (
     <>
       <Layout>
         <div
-          style={{ backgroundColor: "#E4F0F8", width: "100%", height: "100%" }}
+          style={{ backgroundColor: "#E4F0F8", padding:'2rem 0', width: "100%", height: "100%" }}
         >
           <Container>
-            <Arthur />
+            <Dashboard />
           </Container>
         </div>
       </Layout>
@@ -19,4 +19,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default DashboardPage;

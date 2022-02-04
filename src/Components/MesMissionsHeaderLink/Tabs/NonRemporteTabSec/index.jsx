@@ -23,7 +23,7 @@ const boxWrapTwoData = [
 const NonRemporteTabSec = () => {
   return (
     <>
-      <section>  
+      <section>
         {/* box section */}
         {boxWrapTwoData.map((item, index) => {
           return (
@@ -63,9 +63,7 @@ const NonRemporteTabSec = () => {
               </div>
             </>
           );
-        })} 
-
-         
+        })}
       </section>
     </>
   );

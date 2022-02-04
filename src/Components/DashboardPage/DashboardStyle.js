@@ -2,7 +2,42 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(() => ({
   mainContent: {
-    paddingTop: "20px",
+    paddingTop: "0",
+    "& .CircularProgressbar-text" : {
+      fontSize: "20px !important", color: "#143D66 !important", fontWeight: "bold !important"
+    },
+    "& .CircularProgressbar .CircularProgressbar-path" : {
+      stroke: "#27f5ba !important"
+    },
+    "& .CircularProgressbar .CircularProgressbar-trail" : {
+      stroke: "red !important"
+
+    }
+  },
+
+  topBarData: {
+    background: "#FFFFFF 0% 0% no-repeat padding-box",
+    boxShadow: "0px 6px 6px #0000001D",
+    borderRadius: "5px",
+    borderLeft: "5px solid #FF0202",
+    height: "66px",
+    display: "flex",
+    alignItems: "center",
+    margin: "0 0 1rem",
+
+    "& h4": {
+      font: "normal normal 600 16px/27px Open Sans",
+      color: "#143D66",
+      display: "flex",
+      alignItems: "center",
+    },
+  },
+
+  AccountWrapperText: {
+    margin: "0",
+    textAlign: "left",
+    font: "normal normal 600 16px/22px Open Sans",
+    color: "#143D66",
   },
 
   boxWrapOne: {
@@ -18,21 +53,12 @@ export const useStyles = makeStyles(() => ({
     padding: "30px 10px 30px 30px",
   },
 
-  spaceOneWrapper: {
-    padding: "23px 10px 40px 30px",
-  },
-
   divider: {
-    background: "#143D66",
+    background:
+      "transparent linear-gradient(90deg, #00FFBA 0%, #143D66 100%) 0% 0% no-repeat padding-box",
     height: "7px",
     borderRadius: "4px",
     marginTop: "5px",
-  },
-  tag: {
-    fontSize: "22px",
-    fontFamily: "Open Sans",
-    color: "#143D66",
-    fontWeight: "600",
   },
   slideParaWrap: {
     fontSize: "18px",
@@ -40,7 +66,7 @@ export const useStyles = makeStyles(() => ({
     color: "#143D66",
   },
   asideSpace: {
-    dispaly: "flex !important",
+    display: "flex !important",
     justifyContent: "space-between",
   },
   dividerBlue: {
@@ -51,7 +77,7 @@ export const useStyles = makeStyles(() => ({
   },
 
   accountCircle: {
-    fontSize: "50px",
+    fontSize: "70px !important",
   },
 
   boxNameHeading: {
@@ -78,19 +104,9 @@ export const useStyles = makeStyles(() => ({
     fontSize: "18px",
     lineHeight: "19px",
     fontWeight: "600",
-    margin: "0",
+    marginTop: "0",
     position: "relative",
     fontFamily: "Helvetica Neue",
-
-    "&:after": {
-      content: "sami",
-      // position: "absolute",
-      width: "20px",
-      height: "20px",
-      display: "inline-block",
-      // left: "0",
-      backgroundColor: "red",
-    },
   },
 
   contentWrapData: {
@@ -115,50 +131,6 @@ export const useStyles = makeStyles(() => ({
     margin: "0",
     fontWeight: "700",
     paddingLeft: "8px",
-  },
-
-  boxWrapTwo: {
-    backgroundColor: "#fff",
-    boxShadow: "0px 6px 6px #0000001D",
-    borderRadius: "5px",
-    width: "100%",
-    height: "100%",
-    marginTop: "20px",
-  },
-
-  boxTwoHeading: {
-    fontSize: "25px",
-    lineHeight: "30px",
-    color: "#143D66",
-    fontWeight: "700",
-    margin: "0",
-    fontFamily: "Open Sans",
-  },
-
-  boxTwoSpan: {
-    fontSize: "25px",
-    lineHeight: "30px",
-    color: "#FF0202",
-    fontWeight: "700",
-    margin: "0",
-  },
-
-  boxTwoContent: {
-    fontSize: "18px",
-    lineHeight: "23px",
-    color: "#143D66",
-    fontWeight: "600",
-    margin: "0",
-    paddingTop: "20px",
-    fontFamily: "Helvetica Neue",
-  },
-
-  boxTwoColor: {
-    fontSize: "19px",
-    color: "#FF0202",
-    fontWeight: "500",
-    margin: "0",
-    paddingBottom: "5px",
   },
 
   boxWrapThree: {
@@ -215,6 +187,8 @@ export const useStyles = makeStyles(() => ({
   boxFourGroup: {
     paddingBottom: "20px",
     paddingTop: "17px",
+    display: "flex !important",
+    flexDirection: "row",
   },
 
   boxFourSpan: {
@@ -223,77 +197,92 @@ export const useStyles = makeStyles(() => ({
     fontWeight: "600",
     color: "#143D66",
     margin: "0",
+    marginRight: "18px",
   },
 
-  boxFourDip: {
-    fontSize: "22px",
-    lineHeight: "30px",
-    fontWeight: "700",
+  // ======= Right Side ========
+
+  //   Mes Mission right long tab css
+  headingIcon: {
+    font: "normal normal bold 18px/27px Open Sans",
     color: "#143D66",
-    margin: "0",
+    marginBottom:'0',
   },
 
-  boxFourPara: {
-    fontSize: "22px",
-    lineHeight: "30px",
-    fontWeight: "400",
-    color: "#143D66",
-    margin: "0",
+  headingSpanText: {
+    font: "normal normal bold 16px/24px Open Sans",
+    color: "#04C38F",
   },
 
-  boxWrapFive: {
-    backgroundColor: "#fff",
-    boxShadow: "0px 6px 6px #0000001D",
-    borderRadius: "5px",
-    width: "100%",
-    height: "100%",
-    marginTop: "20px",
-  },
+  letudeTextRow: {
+    display: "flex !important",
+    justifyContent: "space-between",
+    borderBottom: "2px solid #01E3A6",
+    alignItems:"end",
+    padding:'0 0 5px',
 
-  boxFiveHeading: {
-    fontSize: "25px",
-    lineHeight: "30px",
-    color: "#143D66",
-    fontWeight: "700",
-    margin: "0",
+    "& p": {
+      font: "normal normal normal 18px/22px Helvetica Neue",
+      color: "#143D66",
+      margin: "0",
+    },
   },
+  letudeTextRowBlue: {
+    display: "flex !important",
+    justifyContent: "space-between",
+    borderBottom: "2px solid #143D66",
+    alignItems:"end",
+    padding:'0 0 5px',
 
-  // ======= Two Side ========
-
-  slideWrapper: {
-    backgroundColor: "#fff",
-    boxShadow: "0px 6px 6px #0000001D",
-    borderRadius: "5px",
-    width: "100%",
-    height: "100%",
-    marginTop: "20px",
+    "& p": {
+      font: "normal normal normal 18px/22px Helvetica Neue",
+      color: "#143D66",
+      margin: "0",
+    },
   },
+  letudeButtonGreen: {
+    background: "#01E3A6 0% 0% no-repeat padding-box",
+  },
+  letudeButtonBlue: {
+    background: "#143D66 0% 0% no-repeat padding-box !important",
+    color:'#fff !important',
+  },
+  //
 
   slideHeading: {
     display: "flex",
     justifyContent: "space-between",
   },
-  circle: {
-    display: "inline-block",
-    borderRadius: "50%",
-    width: "10px",
-    height: "10px",
-    backgroundColor: "red",
+
+  slideHeadingMonEnterprise: {
+    display: "flex",
+    flexDirection: "row",
   },
+
   slideEnter: {
-    fontSize: "22px",
+    fontSize: "16px",
     lineHeight: "30px",
+    fontFamily: "Open Sans",
     color: "#143D66",
     fontWeight: "600",
     margin: "0",
-    marginTop: "1rem",
+  },
+
+  ModifierBtn: {
+    fontSize: "16px",
+    lineHeight: "30px",
+    fontFamily: "Open Sans",
+    color: "#143D66 !important",
+    border: "2px solid #143D66 !important",
+    fontWeight: "600",
   },
 
   featuredHeading: {
-    fontSize: "22px",
+    fontSize: "16px",
+    fontFamily: "Open Sans",
     lineHeight: "30px",
     color: "#143D66",
-    fontWeight: "600",
+    fontWeight: "700",
     margin: "0",
   },
 
@@ -325,10 +314,19 @@ export const useStyles = makeStyles(() => ({
     backgroundColor: "#fff",
     boxShadow: "0px 6px 6px #0000001D",
     borderRadius: "5px",
-    // padding: "30px 30px 0 30px",
+    position: "relative",
     width: "100%",
     height: "100%",
     marginTop: "20px",
+  },
+
+  slideThreeWrapBottomLine: {
+    width: "100%",
+    height: "6px",
+    background:
+      "transparent linear-gradient(90deg, #04C38F 0%, #143D66 100%) 0% 0% no-repeat padding-box",
+    bottom: 0,
+    position: "absolute",
   },
 
   slideTwoWrap: {
@@ -341,10 +339,18 @@ export const useStyles = makeStyles(() => ({
   },
 
   ecoleHeading: {
-    fontSize: "22px",
+    fontSize: "18px",
     lineHeight: "30px",
     color: "#143D66",
     fontWeight: "600",
+    margin: "0",
+  },
+
+  ecoleHeadingText: {
+    fontSize: "15px",
+    lineHeight: "20px",
+    color: "#143D66",
+    fontWeight: "300",
     margin: "0",
   },
 
@@ -356,13 +362,6 @@ export const useStyles = makeStyles(() => ({
     margin: "0",
   },
 
-  loremParagraph: {
-    fontSize: "18px",
-    margin: "0",
-    fontFamily: "Open Sans",
-    color: "#143D66",
-  },
-
   slideFiveWrap: {
     backgroundColor: "#fff",
     boxShadow: "0px 6px 6px #0000001D",
@@ -370,11 +369,6 @@ export const useStyles = makeStyles(() => ({
     width: "100%",
     height: "100%",
     marginTop: "20px",
-  },
-
-  boxWrap: {
-    paddingTop: "20px",
-    gap: "20px",
   },
 
   slideFourWrap: {

@@ -11,6 +11,8 @@ import TermineTabSec from "./TermineTabSec";
 import AnnuleTabSec from "./AnnuleTabSec";
 import NonRemporteTabSec from "./NonRemporteTabSec";
 import JeProposeUneMissionTab from "./JeProposeUneMission";
+import AddIcon from '@mui/icons-material/Add';
+import ArticleIcon from '@mui/icons-material/Article';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -73,6 +75,7 @@ export default function MainSideTabs() {
           borderColor: "divider",
           width:'22%'
         }}
+        style={{maxWidth:'17%', minWidth:'17%'}}
       >
         <Tab
           style={{
@@ -88,6 +91,7 @@ export default function MainSideTabs() {
             paddingLeft: "30px",
           }}
           label="En cours"
+          icon={<ArticleIcon /> }
           {...a11yProps(1)}
         />
         <Tab
@@ -96,6 +100,7 @@ export default function MainSideTabs() {
             paddingLeft: "30px",
           }}
           label="Terminé"
+          icon={<ArticleIcon />}
           {...a11yProps(2)}
         />
         <Tab
@@ -130,6 +135,7 @@ export default function MainSideTabs() {
             color:'#04C38F'
           }}
           label="Je créé une mission"
+          icon={<AddIcon />}
           {...a11yProps(6)}
         /> 
       </Tabs>

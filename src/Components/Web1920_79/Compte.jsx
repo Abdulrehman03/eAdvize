@@ -23,6 +23,27 @@ const Compte = () => {
                 <TextField style={{ width: "80%", marginLeft: '0.5rem', height: "42px" }} variant="outlined" />
                 <p className={classes.label}>Prénom</p>
                 <TextField style={{ width: "80%", marginLeft: '0.5rem' }} variant="outlined" />
+                
+               <div style={{maxWidth : "90%"}}> 
+                    <Grid container spacing={2} justifyContent={"space-evenly"} mt={1}>
+                        <Grid item sm={5} >
+                            <div className={classes.dateWrapper}>
+                                <MobileDatePicker
+                                    inputFormat="MM/dd/yyyy"
+                                    value={value}
+                                    onChange={handleChange}
+                                    renderInput={(params) => <TextField {...params} />}
+                                /></div>
+                        </Grid>
+                        <Grid item sm={5} >
+                            <div className={classes.btnWrapper}>
+                                <Button variant="contained" >Enregistrer</Button>
+                            </div>
+                        </Grid>
+                    </Grid>
+               </div>
+
+
             </Grid>
             <Grid item md={5} style={{ backgroundColor: "#143D66" }} ml={2}>
                 <div>

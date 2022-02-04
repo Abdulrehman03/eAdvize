@@ -155,9 +155,11 @@ export const useStyles = makeStyles(() => ({
 
   boxTwoColor: {
     fontSize: "19px",
+    lineHeight: "23px",
     color: "#FF0202",
     fontWeight: "500",
     margin: "0",
+    paddingTop: "5px",
     paddingBottom: "5px",
   },
 
@@ -273,20 +275,13 @@ export const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "space-between",
   },
-  circle: {
-    display: "inline-block",
-    borderRadius: "50%",
-    width: "10px",
-    height: "10px",
-    backgroundColor: "red",
-  },
+
   slideEnter: {
     fontSize: "22px",
     lineHeight: "30px",
     color: "#143D66",
     fontWeight: "600",
     margin: "0",
-    marginTop: "1rem",
   },
 
   featuredHeading: {
@@ -340,12 +335,118 @@ export const useStyles = makeStyles(() => ({
     marginTop: "20px",
   },
 
-  ecoleHeading: {
-    fontSize: "22px",
-    lineHeight: "30px",
+  // Form Group
+  asideForm: {
+    backgroundColor: "#fff",
+    boxShadow: "0px 6px 6px #0000001D",
+    borderRadius: "5px",
+    width: "100%",
+    height: "100%",
+    marginTop: "20px",
+  },
+
+  asideGroup: {
+    padding: "15px 40px 40px 20px",
+  },
+
+  asideHeading: {
+    fontSize: "25px !important",
+    lineHeight: "34px !important",
+    color: "#143D66 !important",
+    fontWeight: "700 !important",
+  },
+
+  formGroup: {
+    marginTop: "10px",
+  },
+
+  formHeading: {
+    fontSize: "18px",
+    lineHeight: "24px",
+    color: "#143D66",
+    fontWeight: "700",
+    margin: "0",
+  },
+
+  formLabel: {
+    margin: "0",
+    fontSize: "18px",
+    lineHeight: "24px",
+    color: "#143D66",
+    fontWeight: "600",
+    paddingTop: "8px",
+  },
+
+  checkboxGroup: {
+    paddingTop: "5px",
+  },
+
+  checkboxLabelText: {
+    fontSize: "18px",
+    lineHeight: "24px",
+    color: "#143D66",
+    fontWeight: "600",
+    margin: "10px 0 0 0",
+  },
+
+  inputFieldGroup: {
+    paddingTop: "8px",
+  },
+
+  flexTextField: {
+    display: "flex",
+    gap: "12px",
+  },
+
+  textAreaWrapper: {
+    paddingTop: "10px",
+  },
+
+  textAreaPara: {
+    fontSize: "18px",
+    fontWeight: "600",
+    color: "#143D66",
+    lineHeight: "24px",
+    margin: "0",
+    paddingTop: "10px",
+    paddingBottom: "8px",
+  },
+
+  textAreaField: {
+    width: "100%",
+    height: "77px !important",
+    border: "1px solid #143D66",
+    borderRadius: "5px",
+    outline: "none",
+  },
+
+  companyText: {
+    fontSize: "18px",
+    lineHeight: "24px",
     color: "#143D66",
     fontWeight: "600",
     margin: "0",
+  },
+
+  btnOne: {
+    fontSize: "18px !important",
+    lineHeight: "24px !important",
+    color: "#143D66 !important",
+    fontWeight: "600 !important",
+    borderRadius: "5px !important",
+    padding: "8px 15px !important",
+    border: "1px solid #143D66 !important",
+  },
+
+  btnTwo: {
+    fontSize: "18px !important",
+    lineHeight: "24px !important",
+    fontWeight: "600 !important",
+    borderRadius: "5px !important",
+    padding: "8px 23px !important",
+    border: "1px solid #143D66 !important",
+    backgroundColor: "#143D66 !important",
+    color: "#ffffff !important",
   },
 
   currentDate: {
@@ -356,11 +457,22 @@ export const useStyles = makeStyles(() => ({
     margin: "0",
   },
 
+  circle: {
+    display: "inline-block",
+    borderRadius: "50%",
+    width: "10px",
+    height: "10px",
+    backgroundColor: "red",
+  },
+
   loremParagraph: {
     fontSize: "18px",
     margin: "0",
     fontFamily: "Open Sans",
     color: "#143D66",
+  },
+  accountWrapper: {
+    verticalAlign: "top",
   },
 
   slideFiveWrap: {
@@ -371,12 +483,12 @@ export const useStyles = makeStyles(() => ({
     height: "100%",
     marginTop: "20px",
   },
-
-  boxWrap: {
-    paddingTop: "20px",
-    gap: "20px",
+  ecoleHeading: {
+    fontSize: "22px",
+    color: "#143D66",
+    fontWeight: "600",
+    margin: "0",
   },
-
   slideFourWrap: {
     backgroundColor: "#fff",
     boxShadow: "0px 6px 6px #0000001D",

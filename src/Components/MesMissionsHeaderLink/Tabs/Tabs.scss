@@ -1,7 +1,39 @@
 .TabsSection_mesMissions{
     .css-9v9v8a-MuiButtonBase-root-MuiTab-root.Mui-selected {
         color: #fff !important;
-        background: #27F5BA;
+        background: #27F5BA !important;
+        font: normal normal 600 14px/20px Open Sans !important;
+    }
+
+    .css-bo3j5p-MuiButtonBase-root-MuiTab-root.Mui-selected {
+        color: #fff !important;
+        background: #27F5BA !important;
+        font: normal normal 600 14px/20px Open Sans !important;
+
+        .css-bo3j5p-MuiButtonBase-root-MuiTab-root>.MuiTab-iconWrapper {
+            color: #fff !important;
+            fill: #fff !important;
+            min-height: 52px !important;
+        }
+    }
+
+    // non active
+    .css-bo3j5p-MuiButtonBase-root-MuiTab-root {
+            min-height: 52px !important;
+            font: normal normal 600 14px/20px Open Sans !important; 
+            color: #143d66 !important;
+    }
+
+    .css-9v9v8a-MuiButtonBase-root-MuiTab-root{
+        color: #143d66 !important;
+    }
+
+    .css-bo3j5p-MuiButtonBase-root-MuiTab-root>.MuiTab-iconWrapper { 
+        position: absolute;
+        right: 30%;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: #28648B 0% 0% no-repeat padding-box !important; 
     }
 
     .css-1c4okmc-MuiTabs-root {
@@ -9,4 +41,4 @@
             width: 18% !important;
         }
     }
-}
+} 
